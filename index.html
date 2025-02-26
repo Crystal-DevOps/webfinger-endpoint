@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Core Data</title>
+    <style>
+        body {
+            background: #000;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+            color: #0ff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        h1 {
+            font-size: 4em;
+            text-shadow: 0 0 15px #0ff;
+            animation: glitch 1s infinite;
+            margin: 0;
+        }
+
+        .status {
+            border: 2px solid #0ff;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 0 20px #0ff;
+        }
+
+        .blink {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-3px, 3px); }
+            40% { transform: translate(-3px, -3px); }
+            60% { transform: translate(3px, 3px); }
+            80% { transform: translate(3px, -3px); }
+            100% { transform: translate(0); }
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .terminal {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 2px solid #0ff;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>> CRYSTAL_CORE_DATA</h1>
+        <div class="status">
+            SYSTEM STATUS: <span style="color: #ff0">[CONSTRUCTION MODE]</span><br>
+            <span class="blink">⏣ ENCRYPTION ACTIVE</span>
+        </div>
+    </div>
+
+    <div class="terminal">
+        > Initializing neural network protocols...<br>
+        > Loading security matrix............<span class="blink">█</span>
+    </div>
+</body>
+</html>
